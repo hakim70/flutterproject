@@ -8,7 +8,9 @@ class DashboardScreen extends StatelessWidget {
     return Scaffold(
       appBar: Navbar(),
       drawer: Sidebar(),
-      body: Center(child: Text('Bienvenue au Dashboard')),
+      body: Center(
+        child: Text('Bienvenue au Dashboard', style: TextStyle(fontSize: 24)),
+      ),
     );
   }
 }

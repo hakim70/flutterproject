@@ -1,5 +1,10 @@
-// lib/widgets/sidebar.dart
 import 'package:flutter/material.dart';
+import 'package:admin_dashboard/screens/products_screen.dart';
+import 'package:admin_dashboard/screens/categories_screen.dart';
+import 'package:admin_dashboard/screens/orders_screen.dart';
+import 'package:admin_dashboard/screens/users_screen.dart';
+import 'package:admin_dashboard/screens/statistics_screen.dart';
+import 'package:admin_dashboard/screens/recommendations_screen.dart';
 
 class Sidebar extends StatelessWidget {
   @override
@@ -7,20 +12,46 @@ class Sidebar extends StatelessWidget {
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
-        children: [
+        children: <Widget>[
           DrawerHeader(
-            decoration: BoxDecoration(color: Colors.purple),
+            decoration: BoxDecoration(color: Colors.deepPurple),
             child: Text('Menu', style: TextStyle(color: Colors.white)),
           ),
           ListTile(
-            leading: Icon(Icons.dashboard),
-            title: Text('Dashboard'),
-            onTap: () => Navigator.pushNamed(context, '/'),
+            title: Text('Produits'),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ProductsScreen()));
+            },
           ),
           ListTile(
-            leading: Icon(Icons.add),
-            title: Text('Ajouter un produit'),
-            onTap: () => Navigator.pushNamed(context, '/add-product'),
+            title: Text('Catégories'),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => CategoriesScreen()));
+            },
+          ),
+          ListTile(
+            title: Text('Commandes'),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => OrdersScreen()));
+            },
+          ),
+          ListTile(
+            title: Text('Utilisateurs'),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => UsersScreen()));
+            },
+          ),
+          ListTile(
+            title: Text('Statistiques'),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => StatisticsScreen()));
+            },
+          ),
+          ListTile(
+            title: Text('Recommandations'),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => RecommendationsScreen()));
+            },
           ),
         ],
       ),

@@ -1,7 +1,11 @@
-// main.dart
 import 'package:flutter/material.dart';
 import 'screens/dashboard_screen.dart';
-import 'screens/add_product_screen.dart';
+import 'screens/products_screen.dart';
+import 'screens/categories_screen.dart';
+import 'screens/orders_screen.dart';
+import 'screens/users_screen.dart';
+import 'screens/statistics_screen.dart';
+import 'screens/recommendations_screen.dart';
 
 void main() {
   runApp(AdminDashboardApp());
@@ -13,11 +17,15 @@ class AdminDashboardApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Admin Dashboard',
-      theme: ThemeData(primarySwatch: Colors.purple),
-      initialRoute: '/',
+      initialRoute: '/dashboard',
       routes: {
-        '/': (context) => DashboardScreen(),
-        '/add-product': (context) => AddProductScreen(),
+        '/dashboard': (context) => DashboardScreen(),
+        '/products': (context) => ProductsScreen(),
+        '/categories': (context) => CategoriesScreen(),
+        '/orders': (context) => OrdersScreen(),
+        '/users': (context) => UsersScreen(),
+        '/statistics': (context) => StatisticsScreen(),
+        '/recommendations': (context) => RecommendationsScreen(),
       },
     );
   }
