@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:admin_dashboard/screens/products_screen.dart';
 import 'package:admin_dashboard/screens/categories_screen.dart';
 import 'package:admin_dashboard/screens/orders_screen.dart';
-import 'package:admin_dashboard/screens/users_screen.dart';
-import 'package:admin_dashboard/screens/statistics_screen.dart';
+import 'package:admin_dashboard/screens/products_screen.dart';
 import 'package:admin_dashboard/screens/recommendations_screen.dart';
+import 'package:admin_dashboard/screens/statistics_screen.dart';
+import 'package:admin_dashboard/screens/users_screen.dart';
+import 'package:flutter/material.dart';
 
 class Sidebar extends StatelessWidget {
   @override
@@ -14,7 +14,7 @@ class Sidebar extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: <Widget>[
           DrawerHeader(
-            decoration: BoxDecoration(color: Colors.deepPurple),
+            decoration: BoxDecoration(color: Colors.blue),
             child: Text('Menu', style: TextStyle(color: Colors.white)),
           ),
           ListTile(
